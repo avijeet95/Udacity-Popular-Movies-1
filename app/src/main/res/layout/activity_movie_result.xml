@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.udacityavijeet.Activity.MovieResult">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_heightPercent="40%"
+        android:id="@+id/imageMV_backdrop"
+        android:src="@drawable/doctor"
+        android:scaleType="centerCrop"/>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_marginTopPercent="20%">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_heightPercent="40%"
+            app:layout_widthPercent="40%"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/doctor"
+            android:id="@+id/imageMV_Poster"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textMV_Name"
+            android:text="asdad"
+            android:textSize="18sp"
+            android:ellipsize="marquee"
+            android:layout_toRightOf="@+id/imageMV_Poster"
+            android:layout_toEndOf="@+id/imageMV_Poster"
+            app:layout_marginTopPercent="27%"
+            android:elevation="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdad"
+            android:id="@+id/textMV_UserR"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/imageMV_Poster"
+            android:layout_toEndOf="@+id/imageMV_Poster"
+            android:layout_below="@+id/textMV_Name"/>
+
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="2dp"-->
+            <!--android:background="@color/colorPrimary"-->
+            <!--android:layout_below="@+id/imageMV_Poster"/>-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/imageMV_Poster">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textMV_Synopsis"
+                    android:text="asdad"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textMV_RD"
+                    android:text="asdad"
+                    android:textSize="18sp"
+                    android:layout_below="@+id/textMV_Synopsis"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingStart="10dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.percent.PercentFrameLayout>
